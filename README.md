@@ -1,12 +1,17 @@
+<div align="center">
+
 # ⚡ Energy Ops Assistant
 
 > A GenAI-powered tool for operational energy data analysis — ask questions about your energy reports and sensor data in plain English.
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://energy-ops-assistant.streamlit.app)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.35%2B-red?logo=streamlit)
 ![LangChain](https://img.shields.io/badge/LangChain-0.2%2B-green)
 ![Groq](https://img.shields.io/badge/Groq-Llama_3.3_70B-F55036)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+</div>
 
 ---
 
@@ -23,8 +28,17 @@ The assistant retrieves the relevant data chunks and generates a grounded, accur
 
 ---
 
-## 🏗️ Architecture
+## 🚀 Live Demo
 
+👉 **[Try it here](https://energy-ops-assistant.streamlit.app)**
+
+1. Enter your free [Groq API key](https://console.groq.com) in the sidebar
+2. Upload a CSV or PDF file — or click **Load Sample Energy Data**
+3. Ask questions in plain English
+
+---
+
+## 🏗️ Architecture
 ```
 User Query
     │
@@ -54,36 +68,6 @@ Streamlit UI (app.py)
 
 ---
 
-## 🚀 Getting Started
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/energy-ops-assistant.git
-cd energy-ops-assistant
-```
-
-### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Set up your API key
-Get a free Groq API key at [console.groq.com](https://console.groq.com):
-```bash
-cp .env.example .env
-# Edit .env and add your key:
-# GOOGLE_API_KEY=AIzaSy...
-```
-
-### 4. Run the app
-```bash
-streamlit run app.py
-```
-
-Open [http://localhost:8501](http://localhost:8501) in your browser.
-
----
-
 ## 📊 Sample Data
 
 The project includes a synthetic energy dataset (`data/sample/sample_energy_data.csv`) with:
@@ -91,11 +75,6 @@ The project includes a synthetic energy dataset (`data/sample/sample_energy_data
 - **365 days** of daily readings per site (2024)
 - Features: consumption, solar/wind production, grid import, CO₂ emissions, peak demand
 - Realistic seasonal patterns and injected anomalies (~2%)
-
-To regenerate the sample data:
-```bash
-cd data/sample && python generate_sample.py
-```
 
 ---
 
@@ -111,7 +90,6 @@ Once a file is loaded, try asking:
 ---
 
 ## 📁 Project Structure
-
 ```
 energy-ops-assistant/
 ├── app.py                        # Streamlit application
@@ -135,22 +113,23 @@ energy-ops-assistant/
 
 ## 🔒 Security Notes
 
-- **Never commit your `.env` file** — it's listed in `.gitignore`
-- The API key is entered via the Streamlit sidebar (password field) and never stored to disk
-- All document processing and embeddings are done locally — only the final LLM call is sent to Groq
+- Your Groq API key is entered via the sidebar and never stored to disk
+- All document processing and embeddings run locally — only the final LLM call is sent to Groq
 
 ---
 
 ## 🌍 Real-World Applications
 
-This project is designed to mirror tools used in industrial operations (e.g., water treatment, waste management, energy infrastructure) where operators need to quickly extract insights from large volumes of sensor and report data — a core use case at companies like **Veolia**, **Engie**, or **EDF**.
+This project mirrors tools used in industrial operations (e.g., water treatment, waste management, energy infrastructure) where operators need to quickly extract insights from large volumes of sensor and report data — a core use case at companies like **Veolia**, **Engie**, or **EDF**.
 
 ---
 
 ## 📄 License
 
-MIT — free to use, modify, and distribute.
+MIT
 
 ---
 
-*Built as part of a Data Science portfolio. MSc Data Science — Paris 1 Panthéon-Sorbonne.*
+<div align="center">
+Made by <a href="https://github.com/alexissmtt">Alexis Mattei</a>
+</div>
